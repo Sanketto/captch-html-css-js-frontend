@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div id="captcha-container">
+        <h3 class="text-center">Please click on the identical tiles to verify that you are not a robot
+        </h3>
+        <div id="captcha-grid">
+            <section id="img-1" data-ns-test="img-1">
+                <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" alt="img-1"/>
+            </section>
+            <section id="img-2" data-ns-test="img-2">
+                <img src="https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819__340.jpg" alt="img-2"/>
+            </section>
+            <section id="img-3" data-ns-test="img-2">
+                <img src="https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819__340.jpg" alt="img-3"/>
+            </section>
+
+            <section id="img-4" data-ns-test="img-3">
+                <img src="https://cdn.pixabay.com/photo/2014/04/14/20/11/pink-324175__340.jpg" alt="img-4"/>
+            </section>
+            <section id="img-5" data-ns-test="img-4">
+                <img src="https://cdn.pixabay.com/photo/2015/04/19/08/33/flower-729512__340.jpg" alt="img-5"/>
+            </section>
+            <section id="img-6" data-ns-test="img-5">
+                <img src="https://cdn.pixabay.com/photo/2018/02/08/22/27/flower-3140492__340.jpg" alt="img-6"/>
+            </section>
+        </div>
+        <section id="reset">
+            <button type="button" onclick="reset()">Reset</button>
+        </section>
+        <section id="verify">
+            <button type="button" onclick="validate()">Verify</button>
+        </section>
+    </div>
+    <script src="./captcha-js.js"></script>
+</body>
+</html>

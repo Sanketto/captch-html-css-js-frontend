@@ -1,0 +1,42 @@
+.text-center{
+    text-align: center;
+}
+
+#captcha-container{
+    margin: 25% auto;
+    width: 350px;
+    height: 400px;
+    padding: 10px;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+#captcha-grid{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+#captcha-grid img{
+    width: 100px;
+    height: 100px;
+    margin: 3px;
+}
+
+#reset{
+    display: inline;
+}
+
+#verify{
+    display: inline;
+    float: right;
+}
+
+.hide{
+    display: none;
+}
+
+.img-clicked{
+    outline: 5px solid greenyellow;
+}
+
