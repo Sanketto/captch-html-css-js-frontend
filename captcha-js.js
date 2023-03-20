@@ -23,15 +23,15 @@ function select(e, el) {
         ans.push(data)
         selectedImg.push(e)
     }
-    // if(selectedImg.length == 2){
-    //     if(selectedImg[0].target.getAttribute('alt') === selectedImg[1].target.getAttribute('alt'))
-    //     {
-    //         e.target.classList.remove('img-clicked')
-    //         selectedImg=[]
-    //         ans=[]
-    //     }
+    if(selectedImg.length == 2){
+        if(selectedImg[0].target.getAttribute('alt') === selectedImg[1].target.getAttribute('alt'))
+        {
+            e.target.classList.remove('img-clicked')
+            selectedImg=[]
+            ans=[]
+        }
 
-    // }
+    }
     e.target.classList.add('img-clicked')
 
     if (ans.length >= 2) btnVerify.childNodes[1].classList.remove('hide')
@@ -44,22 +44,28 @@ function validate() {
         alert('You are a human. Congratulations!')
         btnReset.childNodes[1].classList.add('hide')
         btnVerify.childNodes[1].classList.add('hide')
+        reset();
     }
     else {
         alert('We cant verify you as a human You selected the non identical tiles')
         btnReset.childNodes[1].classList.add('hide')
         btnVerify.childNodes[1].classList.add('hide')
+        reset();
     }
     for (let i = 0; i < selectedImg.length; i++) {
         selectedImg[i].target.classList.remove('img-clicked')
     }
     ans = []
     selectedImg = []
+    reset()
 }
 
 function reset() {
     for (let i = 0; i < selectedImg.length; i++) {
         selectedImg[i].target.classList.remove('img-clicked')
+    }
+    for (let i = 0; i < grid[0].children.length; i++) {
+        grid[0].children[i].classList.remove('img-clicked')
     }
     btnReset.childNodes[1].classList.add('hide')
     btnVerify.childNodes[1].classList.add('hide')
